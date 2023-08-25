@@ -1,5 +1,6 @@
 import Image from 'next/image'
 import styles from './page.module.css'
+import button from './components/button'
 
 export default function Home() {
   return (
@@ -13,6 +14,7 @@ export default function Home() {
           <a
             href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
             target="_blank"
+            
             rel="noopener noreferrer"
           >
             By{' '}
@@ -22,7 +24,7 @@ export default function Home() {
               className={styles.vercelLogo}
               width={100}
               height={24}
-              priority
+              priorityd
             />
           </a>
         </div>
@@ -93,3 +95,5 @@ export default function Home() {
     </main>
   )
 }
+
+<Button>Teste</Button>
