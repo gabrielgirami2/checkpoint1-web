@@ -26,14 +26,14 @@ export default function page() {
 
       <div className={styles.forms}>
         <div className={styles.description}>
-          <form className={styles.QuestionForm}>formulário</form>
+          <form className={styles.QuestionForm}>QuestionForm</form>
         </div>
 
         <div className={styles.description}>
-          <form className={styles.AnswerForm}>formulário1</form>
+          <form className={styles.AnswerForm}>AnswerForm</form>
         </div>
       </div>
-
+      
       <div className={styles.messenger}>
         <TextField label="question"
           type="text" placeholder="Digite aqui..."
