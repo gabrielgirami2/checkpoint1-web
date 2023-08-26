@@ -1,33 +1,44 @@
 "use client"
 
 import styles from './page.module.css';
-import React from 'react';
+import React, { useState } from 'react';
 import styled from 'styled-components';
-import Button from './components/button';
+import button from './components/button';
 import Navbar from './components/navbar';
 import Logo from './assets/logo';
-
+import TextField  from './components/TextEditor';
 
 
 export default function page() {
+  const [name, setName] = useState('');
+
+  const handleNameChange = (event) => {
+    setName(event.target.value);
+  };
+
   return (
     <main className={styles.main}>
       <nav className={styles.navbar}>
-      <button onClick={handleMenuClick}>Open Menu</button>
+        <menu className={styles.menu}><i class="bi bi-list"></i></menu>
         <Logo />
+        <button className={styles.buttonSearch}><i class="bi bi-search"></i></button>
       </nav>
 
-      <div className={styles.description}>
-        <form className={styles.QuestionForm}>formulário</form>
+      <div className={styles.forms}>
+        <div className={styles.description}>
+          <form className={styles.QuestionForm}>formulário</form>
+        </div>
+
+        <div className={styles.description}>
+          <form className={styles.AnswerForm}>formulário1</form>
+        </div>
       </div>
 
-      <div className={styles.description}>
-        <form className={styles.AnswerForm}>formulário1</form>
-      </div>
-
-
-      <div className={styles.description}>
-        <button className={styles.button}>Test</button>
+      <div className={styles.messenger}>
+        <TextField label="question"
+          type="text" placeholder="Digite aqui..."
+          value={name} onChange={handleNameChange}/>
+        <button className={styles.button}><i class="bi bi-send"></i></button>
       </div>
     </main>
   );
