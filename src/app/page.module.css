@@ -18,13 +18,13 @@
   box-shadow: 0px 8px 23px -7px rgba(0, 0, 0, 0.5);
 }
 
-.buttonMenu, .buttonSearch{
+.menu, .buttonSearch{
   background-color: transparent;
   font-size: 18px;
   border: none;
   color: white;
 }
-.buttonMenu{
+.menu{
   padding-left: 8px;
 }
 .buttonSearch{

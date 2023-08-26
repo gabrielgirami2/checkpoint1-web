@@ -19,7 +19,7 @@ export default function page() {
   return (
     <main className={styles.main}>
       <nav className={styles.navbar}>
-        <button className={styles.buttonMenu}><i class="bi bi-list"></i></button>
+        <menu className={styles.menu}><i class="bi bi-list"></i></menu>
         <Logo />
         <button className={styles.buttonSearch}><i class="bi bi-search"></i></button>
       </nav>
