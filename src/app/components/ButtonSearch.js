@@ -1,12 +1,11 @@
-import React from 'react';
 import styled from 'styled-components';
 
-const Menu = styled.menu`
-    padding-left: 8px;
+const ButtonSearch = styled.button`
     background-color: transparent;
+    padding-right: 12px;
     font-size: 18px;
     border: none;
     color: white;
 `;
 
-export default Menu;
+export default ButtonSearch;

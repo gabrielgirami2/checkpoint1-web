@@ -3,11 +3,14 @@
 import styles from './page.module.css';
 import React, { useState } from 'react';
 import styled from 'styled-components';
-import button from './components/button';
+import Button from './components/button';
+import ButtonSearch from './components/ButtonSearch';
 import Navbar from './components/navbar';
 import Logo from './assets/logo';
 import TextField  from './components/TextEditor';
-
+import Menu from './components/menu';
+import QuestionForm from './components/questionForm';
+import AnswerForm from './components/AnswerForm';
 
 export default function page() {
   // eslint-disable-next-line react-hooks/rules-of-hooks
@@ -18,29 +21,32 @@ export default function page() {
   };
 
   return (
-    <main className={styles.main}>
-      <nav className={styles.navbar}>
-        <menu className={styles.menu}><i class="bi bi-list"></i></menu>
-        <Logo />
-        <button className={styles.buttonSearch}><i class="bi bi-search"></i></button>
-      </nav>
+    <div>
+      <header>
+        <Navbar>
+          <Menu ><i class="bi bi-list"></i></Menu>
+          <Logo />
+          <ButtonSearch><i class="bi bi-search"></i></ButtonSearch>
+        </Navbar>
+      </header>
 
-      <div className={styles.forms}>
-        <div className={styles.description}>
-          <form className={styles.QuestionForm}>QuestionForm</form>
-        </div>
+      <main>
+        <br/>
+        <div className='forms'>
+          <div className='description'>
+            <QuestionForm >QuestionForm</QuestionForm>
+          </div>
 
-        <div className={styles.description}>
-          <form className={styles.AnswerForm}>AnswerForm</form>
+          <div className='description'>
+            <AnswerForm>AnswerForm</AnswerForm>
+          </div>
         </div>
-      </div>
-      
-      <div className={styles.messenger}>
-        <TextField label="question"
-          type="text" placeholder="Digite aqui..."
-          value={name} onChange={handleNameChange}/>
-        <button className={styles.button}><i class="bi bi-send"></i></button>
-      </div>
-    </main>
+        
+        <div className='messenger'>
+          <TextField label="question" type="text" placeholder="Digite aqui..." value={name} onChange={handleNameChange}/>
+          <Button><i class="bi bi-send"></i></Button>
+        </div>
+      </main>
+    </div>
   );
 }
