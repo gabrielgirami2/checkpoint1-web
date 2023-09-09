@@ -32,16 +32,52 @@ export default function page() {
 
       <main>
         <br/>
-        <div className='forms'>
+        
+
           <div className='description'>
-            <QuestionForm >QuestionForm</QuestionForm>
+            <QuestionForm >Digite seu CPF</QuestionForm>
           </div>
 
           <div className='description'>
-            <AnswerForm>AnswerForm</AnswerForm>
+            <AnswerForm>123.456.789-00</AnswerForm>
           </div>
-        </div>
+
         
+
+          <div className='description'>
+            <QuestionForm >Digite seu e-mail</QuestionForm>
+          </div>
+
+          <div className='description'>
+            <AnswerForm>usuario@gmail.com</AnswerForm>
+          </div>
+
+          <div className='description'>
+            <QuestionForm >Digite sua localização atual</QuestionForm>
+          </div>
+
+          <div className='description'>
+            <AnswerForm>Avenida Paulista, 800</AnswerForm>
+          </div>
+
+          <div className='description'>
+            <QuestionForm >Modelo do chassi do veículo</QuestionForm>
+          </div>
+
+          <div className='description'>
+            <AnswerForm>Tamanho das rodas do veículo</AnswerForm>
+          </div>
+        
+          <div className='description'>
+            <QuestionForm >O veículo é modificado?</QuestionForm>
+          </div>
+
+          <div className='description'>
+            <AnswerForm>Resposta</AnswerForm>
+          </div>
+
+          
+
         <div className='messenger'>
           <TextField label="question" type="text" placeholder="Digite aqui..." value={name} onChange={handleNameChange}/>
           <Button><i class="bi bi-send"></i></Button>
